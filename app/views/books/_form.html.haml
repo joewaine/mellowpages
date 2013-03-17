@@ -1,0 +1,22 @@
+.row
+  .large-3.columns
+    = form_for @book, :remote => true do |f|
+      = f.label :title
+      = f.text_field :title, :autofocus => true
+      = f.label :image
+      = f.text_field :image
+      = f.label :isbn
+      = f.text_field :isbn
+      = f.label :total_copies
+      = f.text_field :total_copies
+      = f.label :copies_available
+      = f.text_field :copies_available
+      = f.label :loan_duration
+      = f.text_field :loan_duration
+      %p
+        - Genre.find(:all, :order => 'LOWER(name)').each do |genre|
+          = genre.name
+          = check_box_tag 'book[genre_ids][]', genre.id, genre.in?(@book.genres.to_a)
+      = f.submit nil, :class => 'buttonofform'
+      = link_to('Cancel', '#', :id => 'cancel_book_form', :class => 'button')
+  .large-9.columns

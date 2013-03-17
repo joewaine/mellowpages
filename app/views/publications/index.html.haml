@@ -1,0 +1,6 @@
+= link_to('New', new_publication_path, :remote => true, :class => 'button radius tiny success') if is_admin?
+
+#new_publication
+%ol#publications
+  = render(:partial => 'publications')
+

@@ -1,0 +1,11 @@
+/ %h6= @author.first_name
+/ %h6= @author.last_name
+%table
+  %tr
+    %td#authorindexname= @author.first_name.capitalize+' '+@author.last_name.capitalize
+    / %td#authorindexname=
+  %tr
+    %th name
+  - @author.books.each do |book|
+    %tr
+      %td= book.title

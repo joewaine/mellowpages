@@ -1,0 +1,8 @@
+%table
+  %tr
+    %td Name
+  - @authors.each do |author|
+    %tr
+      %td= link_to(author.first_name, author, :class => 'button')+link_to(author.last_name, author, :class => 'button')
+      %td= link_to('Edit', edit_author_path(author), :remote => true, :class => 'button') if is_admin?
+      %td= link_to('Delete Author', author, :method => :delete, :confirm => 'Are you sure?') if is_admin?

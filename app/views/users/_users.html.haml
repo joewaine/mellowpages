@@ -1,0 +1,12 @@
+%table
+  %tr
+    %th first
+    %th last
+    %th email
+  - @users.each do |user|
+    %tr
+      %td= link_to(user.first_name, user, :class => 'button')
+      %td= user.last_name
+      %td= user.email
+      %td= link_to('Edit', edit_user_path(user), :remote => true, :class => 'button') if is_admin?
+      %td= link_to('Delete User', user, :method => :delete, :confirm => 'Are you sure?') if is_admin?

@@ -1,0 +1,8 @@
+%table
+  %tr
+    %td title
+    %td total copies
+  - @publications.each do |publication|
+    %tr
+      %td= link_to(publication.publication_title, publication, :class => 'button')
+      %td= publication.total_copies

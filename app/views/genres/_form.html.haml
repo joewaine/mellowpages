@@ -1,0 +1,9 @@
+.row
+  .large-3.columns
+    = form_for @genre, :remote => true do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      = f.submit nil, :class => 'buttonofform'
+  .large-9.columns
+
+

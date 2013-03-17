@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html style="background: url('http://i.imgur.com/1YsoHbH.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+
+
+
+
+
+<head>
+  <title>Mellow Pages</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<section class="headfoot">
+<%= render :partial => 'layouts/nav' %>
+</section>
+<section class='meat'>
+<div class="row" id="annoying">
+<div class="bodycontent">
+<%= yield %>
+</div>
+</div>
+</section>
+<section class="headfoot">
+<%= render :partial => 'layouts/footer' %>
+</section>
+</body>
+</html>

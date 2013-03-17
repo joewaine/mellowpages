@@ -1,0 +1,20 @@
+<div id="mellow" class="row">
+  <div class="large-12 columns">
+    <%= link_to('Mellow Pages', root_path, :class => 'button', :id => 'logotop') %>
+<!--      <a href="#" class="button" id="logotop">Mellow Pages</a> -->
+    <div class="nav-bar right">
+     <ul class="button-group">
+<!--       <li><a href="#" class="button">Mellow Pages</a></li> -->
+<!--        <li><%= link_to('Home', root_path, :class => 'button') %></li> -->
+       <li><%= link_to('Users', users_path, :class => 'button') if is_admin? %></li>
+       <li><%= link_to('My Account', users_path, :class => 'button') if @auth.present? %></li>
+       <li><%= link_to('Genres', genres_path, :class => 'button') %></li>
+       <li><%= link_to('Books', books_path, :class => 'button') %></li>
+<!--        <li><%= link_to('Publications', publications_path, :class => 'button') %></li> -->
+       <li><%= link_to('Authors', authors_path, :class => 'button') %></li>
+       <li><%= login_nav %></li>
+       </ul>
+    </li>
+    </div>
+  </div>
+</div>

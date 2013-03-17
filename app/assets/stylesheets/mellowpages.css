@@ -1,0 +1,347 @@
+@import url(http://fonts.googleapis.com/css?family=Enriqueta:400,700);
+
+/**
+{
+  background: #0fffaf;
+  font-family: 'Enriqueta', serif;
+  border: 0px;
+  color: #4d4d4d;
+  padding: 0px;
+  margin: 0px;
+}
+*/
+
+body
+{
+  background: url('http://i.imgur.com/1YsoHbH.jpg') no-repeat center center fixed;
+  /*background: url('http://i.imgur.com/Hx0mb18.jpg') no-repeat center center fixed;*/
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Times', serif;
+  font-style: italic;
+  font-size: 14px;
+  border: 0px;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 60px;
+/*  transition:rotate 2s;
+  -webkit-transform:rotate(-2deg);
+-moz-transform:rotate(-180deg);
+-webkit-transform:rotate(-180deg);
+-o-transform:rotate(-180deg);*/
+}
+
+
+/*body:hover
+{
+  background: url('http://i.imgur.com/Hx0mb18.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Times', serif;
+  font-style: italic;
+  font-size: 14px;
+  border: 0px;
+  color: #4d4d4d;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 160px;
+/*  -webkit-transform:rotate(0deg);
+transform:rotate(0deg);
+-moz-transform:rotate(0deg);
+-webkit-transform:rotate(0deg);
+-o-transform:rotate(0deg);*/
+/*}*/
+
+h2
+{
+  font-family: 'Enriqueta', serif;
+  color: #7f7f00;
+}
+
+.button, .button-group
+{
+  background-color: transparent;
+  border: 0px;
+  margin: 0px;
+}
+
+.button, .button-group li
+{
+  background: #fff;
+  margin: 3px;
+  color: #666;
+}
+
+input.buttonofform
+{
+  background: transparent;
+  margin: 3px;
+  color: #fff;
+}
+
+table, ol table
+{
+  background: transparent;
+  border: 0px;
+  color: #fff;
+    padding: 0px;
+  margin: 0px;
+}
+
+/*table tr td
+{
+  padding: 0px;
+  margin: 0px;
+  background: transparent;
+
+}*/
+
+
+ul
+{
+  background-color: transparent;
+  border: 0px;
+  color: #fff;
+}
+
+li
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+a, footer a
+{
+  margin: 0px;
+  padding: 4px;
+   color:inherit;
+  text-decoration: none;
+}
+
+#logotop
+{
+  margin: 4px;
+  padding: 4px 8px;
+  /*background: white;*/
+}
+
+#author_first_name, #author_last_name, #user_first_name, #user_last_name, #user_email, #user_phone, #user_password, #user_password_confirmation, #email, #password, #genre_name, #book_title, #book_image, #book_isbn, #book_total_copies, #book_copies_available, #book_loan_duration
+{
+  background-color: transparent;
+  border: 0px;
+    margin: 10px 0px;
+  padding: 0px;
+  box-shadow: none;
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+/*  font-size: 20px;*/
+  padding-left: 0px;
+  border-radius: 10px 0px 10px 0px;
+  width: 200px;
+}
+
+.button.radius.tiny.success
+{
+    margin: 10px 0px;
+    background: #94f7d6;
+}
+
+.button.radius
+{margin: 10px 0px;
+padding: 0px;
+background: #ddd}
+
+.button.radius:hover
+{margin: 10px 0px;
+  padding: 0px;
+  background: white;
+}
+
+.button-group li, a{
+  padding: 0px;
+  margin: 0px;
+  background: transparent;
+}
+
+a.button
+{padding: 0px 10px;
+margin: 0px;
+ -webkit-box-shadow: 0px 0 0px 0 rgba(0, 0, 0, 0)}
+
+
+.buttonlogout
+{padding: 0px 10px;
+margin: 0px;
+background: transparent;
+color: white;
+font-weight: bold}
+
+.buttonlogout:hover
+{padding: 0px 10px;
+margin: 0px;
+background: white;
+color: #666;
+font-weight: bold}
+
+a.button:hover
+{
+  background-color: #ddd;
+  color: #666;
+}
+
+footer.row
+{padding: 0px;
+align: left;}
+
+input
+{
+  background-color: transparent;
+  border: 0px;
+  margin: 10px 0px;
+  padding: 0px;
+  box-shadow: none;
+  border: 0px;
+  color: white;
+  font-style: italic;
+  padding-left: 5px;
+  border-radius: 0px 0px 10px 0px;
+  width: 200px;
+}
+
+/*ul.button-group li:first-child
+{
+background: #ddd;
+color: white;*/
+  /*padding-right: 250px;*/
+/*border: 1px dotted #ddd;
+height: 300px;
+border-radius: 150px;
+text-align: center;}*/
+
+#mellow.row
+{
+  border-bottom: 0px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.button.success
+{
+  background-color: white;
+  color: #666;
+}
+
+.button.success:hover
+{
+  background-color: #ddd;
+  color: #666;
+}
+
+h6 {
+  font-family: 'Times', serif;
+  font-style: italic;
+  /*color: white;*/
+  text-shadow: 0 0 5px #666;
+  -webkit-text-shadow: 0 0 5px #666;
+  -moz-text-shadow: 0 0 5px #666;
+}
+
+#authorindexname
+{
+  font-size: 20px;
+    font-family: 'Times', serif;
+  font-style: italic;
+  color: white;
+      text-shadow: 0 0 5px #666;
+    -webkit-text-shadow: 0 0 5px #666;
+    -moz-text-shadow: 0 0 5px #666;
+}
+
+.bodycontent
+{
+  min-height: 600px;
+  width: 841px;
+  padding-left:10px;
+  color: white;
+}
+
+footer
+{color: white;
+ text-decoration: none;}
+
+ .wdi3
+ {color: white;}
+
+.row
+{padding: 17px;}
+
+a.button
+{color: white;
+background: transparent;}
+
+a.buttononbookpage
+{color: white;
+background: transparent;}
+
+.large-6.columns
+{padding: 0px;
+margin: 0px;}
+
+label
+{color: white;}
+
+.book
+{opacity: .9;
+float: left;
+width: 180px;
+height: 300px;
+padding-right: 10px;
+padding-bottom: 10px;}
+
+.bookpageimgs
+{opacity: .9;
+width: 150px;
+-webkit-filter: grayscale(100%) contrast(200%);
+}
+
+
+.actmap
+{opacity: .6;
+width: 300px;
+-webkit-filter: grayscale(100%) contrast(100%);
+float: left;
+margin-top: 5px;}
+
+.followcontact, .press
+{
+  /*display: none;*/
+  border-top: 1px dotted white;
+  width: 195px;
+  line-height: 1.3;
+  float: left;
+  margin-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+
+.homecontent, .map
+{  border-top: 1px dotted white;
+  width: 295px;
+  line-height: 1.3;
+  float: left;
+  margin-left: 15px;
+  padding-top: 8px;
+padding-bottom: 20px;}
+
+#annoying
+{padding-top: 0px;
+margin-top: 0px;}
+
+.indent
+{text-indent: 6px;
+margin-top: 4px;}

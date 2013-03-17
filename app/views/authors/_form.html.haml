@@ -1,0 +1,10 @@
+.row
+  .large-3.columns
+    = form_for @author, :remote => true do |f|
+      = f.label :first_name
+      = f.text_field :first_name, :autofocus => true
+      = f.label :last_name
+      = f.text_field :last_name
+      = f.submit nil, :class => 'buttonofform'
+      = link_to('Cancel', '#', :id => 'cancel_author_form', :class => 'button')
+  .large-9.columns

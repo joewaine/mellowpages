@@ -1,0 +1,4 @@
+= link_to('New Author', new_author_path, :remote => true, :class => 'button') if is_admin?
+#new_author
+%ol#authors
+  = render(:partial => 'authors')

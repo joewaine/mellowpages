@@ -1,0 +1,6 @@
+#new_genre
+%ol
+  = link_to('New Genre', new_genre_path, :remote => true, :id => 'authorindexname') if is_admin?
+%ol#genres
+  = render(:partial => 'genres')
+

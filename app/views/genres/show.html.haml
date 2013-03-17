@@ -1,0 +1,7 @@
+%h6= @genre.name.capitalize
+- @genre.books.each do |book|
+  .book
+    = link_to image_tag(book.image, :class => 'bookpageimgs'), book_path(book)
+    = book.title.capitalize
+    = link_to('Edit', edit_book_path(book), :remote => true, :class => 'button') if is_admin?
+    = link_to('Delete Book', book, :method => :delete, :confirm => 'Are you sure?') if is_admin?
