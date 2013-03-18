@@ -39,7 +39,16 @@ class BooksController < ApplicationController
       book.is_checked_out = true
       book.save
     end
-
+  @auth.books << book
+    redirect_to(books_path)
+  end
+    def return
+    book = Book.find(params[:id])
+    if book.is_checked_out == true
+      book.is_checked_out = false
+      book.save
+    end
+  # @auth.books(book.id).destroy
     redirect_to(books_path)
   end
 end

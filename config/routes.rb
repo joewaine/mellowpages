@@ -1,10 +1,11 @@
 Mellowpages::Application.routes.draw do
   root :to => 'home#index'
-  resources :users, :authors, :genres, :publications
+  resources :users, :authors, :genres, :publications, :accounts, :checkouts
 
   resources :books do
     member do
       post 'checkout'
+      post 'return'
     end
   end
 

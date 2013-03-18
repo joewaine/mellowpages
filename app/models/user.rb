@@ -17,6 +17,6 @@
 class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :phone, :email, :is_active, :is_admin, :password, :password_confirmation
   has_many :checkouts, :inverse_of => :user
-  has_many :books
+  has_many :books, :through => :checkouts
   has_secure_password
 end
