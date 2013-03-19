@@ -21,4 +21,10 @@ class Book < ActiveRecord::Base
   has_and_belongs_to_many :authors
   has_many :checkouts
   has_many :users, :through => :checkouts
+
+def self.import(file)
+  CSV.foreach(file.path, headers: true) do |row|
+    Book.create! row.to_hash
+end
+end
 end

@@ -1,3 +1,34 @@
-%h6= @user.last_name
-%h6= @user.first_name
-/ %p= @book.genre
+%h6 user:
+%table
+  %tr
+    %td= @user.last_name
+    %td,
+    %td= @user.first_name
+%h6 checkouts:
+%br
+%br
+- @user.checkouts.each do |c|
+  = c.book.title
+  %br
+  %br
+  / - if @auth.present?
+  /   - if !c.book.is_checked_out
+  /     = link_to('Reserve!', checkout_book_path(book), :method => :post, :confirm => 'you have reserved this book.')
+  /   - else
+  /     = 'Reserved.'
+  /     %br
+  /     = link_to('Release', return_book_path(book), :method => :post, :confirm => 'you have reserved this book.')
+
+
+
+/ - else
+/   %h3 currently checked out
+/   - @auth.checkouts.where(:is_returned => false).each do |c|
+/     = c.book.title
+/     %br
+/   %hr
+/   %h3 your past checkouts
+/   - @auth.checkouts.where(:is_returned => true).each do |c|
+/     = c.book.title
+/     %br
+/     %br

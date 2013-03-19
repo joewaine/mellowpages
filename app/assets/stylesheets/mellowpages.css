@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Enriqueta:400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
 
 /**
 {
@@ -128,6 +128,8 @@ a, footer a
 {
   margin: 4px;
   padding: 4px 8px;
+  margin-left: 0px;
+  padding-left: 0px;
   /*background: white;*/
 }
 
@@ -144,6 +146,12 @@ a, footer a
   padding-left: 0px;
   border-radius: 10px 0px 10px 0px;
   width: 200px;
+}
+
+
+#file < button
+{
+  background-color: transparent;
 }
 
 .button.radius.tiny.success
@@ -196,7 +204,9 @@ a.button:hover
 }
 
 footer.row
-{padding: 0px;
+{
+  /*border-top: 1px dotted #fff;*/
+  padding: 0px;
 align: left;}
 
 input
@@ -226,7 +236,7 @@ text-align: center;}*/
 
 #mellow.row
 {
-  border-bottom: 0px solid #ddd;
+  border-bottom: 1px dotted #fff;
   padding-bottom: 5px;
 }
 
@@ -246,9 +256,11 @@ h6 {
   font-family: 'Times', serif;
   font-style: italic;
   /*color: white;*/
+  font-size: 30px;
   text-shadow: 0 0 5px #666;
   -webkit-text-shadow: 0 0 5px #666;
   -moz-text-shadow: 0 0 5px #666;
+  color: white;
 }
 
 #authorindexname
@@ -264,11 +276,13 @@ h6 {
 
 .bodycontent
 {
+  /*border-top: 1px dotted white;*/
   min-height: 600px;
   width: 841px;
   padding-left:10px;
   color: white;
 }
+
 
 footer
 {color: white;
@@ -301,7 +315,8 @@ float: left;
 width: 180px;
 height: 300px;
 padding-right: 10px;
-padding-bottom: 10px;}
+padding-bottom: 10px;
+margin-bottom: 5px;}
 
 .bookpageimgs
 {opacity: .9;
@@ -309,6 +324,8 @@ width: 150px;
 -webkit-filter: grayscale(100%) contrast(200%);
 }
 
+
+/*nugs*/
 
 .actmap
 {opacity: .6;
@@ -324,7 +341,7 @@ margin-top: 5px;}
   width: 195px;
   line-height: 1.3;
   float: left;
-  margin-left: 15px;
+  margin-right: 45px;
   padding-top: 8px;
   padding-bottom: 20px;
 }
@@ -334,9 +351,23 @@ margin-top: 5px;}
   width: 295px;
   line-height: 1.3;
   float: left;
-  margin-left: 15px;
+  margin-right: 45px;
   padding-top: 8px;
 padding-bottom: 20px;}
+
+.homecontentlarger
+{  border-top: 0px dotted white;
+  width: 800px;
+  font-size: 40px;
+  line-height: 1.3;
+  font-style: normal;
+  float: left;
+  margin-right: 15px;
+  padding-top: 20px;
+padding-bottom: 20px;
+font-family: 'Vollkorn', serif;
+font-weight: 400;
+}
 
 #annoying
 {padding-top: 0px;
@@ -345,3 +376,9 @@ margin-top: 0px;}
 .indent
 {text-indent: 6px;
 margin-top: 4px;}
+
+#footerpadding{
+  border-top: 1px dotted white;
+  padding-top: 0px;
+  margin-top: 0px;
+}

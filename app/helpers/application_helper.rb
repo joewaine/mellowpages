@@ -6,10 +6,12 @@ module ApplicationHelper
       link_to('Login', login_path, :class => 'button success')
     end
   end
-    def is_admin?
+
+  def is_admin?
     @auth.present? && @auth.is_admin
   end
-    def intellinav
+
+  def intellinav
     links = ""
 
     if @auth.present?

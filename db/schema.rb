@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317181938) do
+ActiveRecord::Schema.define(:version => 20130318231712) do
 
   create_table "authors", :force => true do |t|
     t.string "first_name"
@@ -50,10 +50,16 @@ ActiveRecord::Schema.define(:version => 20130317181938) do
     t.integer "genre_id"
   end
 
+  create_table "books_users", :id => false, :force => true do |t|
+    t.integer "book_id"
+    t.integer "user_id"
+  end
+
   create_table "checkouts", :force => true do |t|
     t.string  "start_date"
     t.integer "user_id"
     t.integer "book_id"
+    t.boolean "is_returned", :default => false
   end
 
   create_table "genres", :force => true do |t|

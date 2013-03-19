@@ -1,5 +1,7 @@
-= link_to('New Book', new_book_path, :remote => true, :id => 'authorindexname') if is_admin?
+%h6 Books
 #new_book
 %ol#books
   = render(:partial => 'books')
+%ol
+  = link_to('+ New Book +', new_book_path, :remote => true, :class => 'button') if is_admin?
 

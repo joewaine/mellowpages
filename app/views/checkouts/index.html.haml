@@ -1,10 +1,17 @@
 - if @auth.checkouts.nil?
   = you dont have any books reserved!
 - else
-  - @auth.checkouts.each do |c|
+  %h6 currently reserved
+  - @auth.checkouts.where(:is_returned => false).each do |c|
     = c.book.title
-  %br
-  %br
+    %br
+    %br
+  %hr
+  %h6 your past reservations
+  - @auth.checkouts.where(:is_returned => true).each do |c|
+    = c.book.title
+    %br
+    %br
 
 
 

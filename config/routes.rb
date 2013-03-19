@@ -3,6 +3,7 @@ Mellowpages::Application.routes.draw do
   resources :users, :authors, :genres, :publications, :accounts, :checkouts
 
   resources :books do
+    collection { post :import}
     member do
       post 'checkout'
       post 'return'

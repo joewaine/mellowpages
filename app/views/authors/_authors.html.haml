@@ -1,6 +1,7 @@
+%h6 Authors
 %table
   %tr
-    %td Authors
+    / %td Authors
   - @authors.each do |author|
     %tr
       %td= link_to(author.first_name, author, :class => 'button')+link_to(author.last_name, author, :class => 'button')
