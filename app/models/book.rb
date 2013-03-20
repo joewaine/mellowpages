@@ -22,6 +22,11 @@ class Book < ActiveRecord::Base
   has_many :checkouts
   has_many :users, :through => :checkouts
 
+def user
+self.checkouts.where(:is_returned => false).first.user
+end
+
+
 def self.import(file)
   CSV.foreach(file.path, headers: true) do |row|
     Book.create! row.to_hash
