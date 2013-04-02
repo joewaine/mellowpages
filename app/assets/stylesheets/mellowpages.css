@@ -35,6 +35,11 @@ body
 -o-transform:rotate(-180deg);*/
 }
 
+thead, th.sorting, th.sorting_asc
+{
+  background-color: white;
+}
+
 
 /*body:hover
 {
@@ -133,9 +138,9 @@ a, footer a
   /*background: white;*/
 }
 
-#author_first_name, #author_last_name, #user_first_name, #user_last_name, #user_email, #user_phone, #user_password, #user_password_confirmation, #email, #password, #genre_name, #book_title, #book_image, #book_isbn, #book_total_copies, #book_copies_available, #book_loan_duration
+#author_first_name, #book_publisher, #book_author, #author_last_name, #user_first_name, #user_last_name, #user_email, #user_phone, #user_password, #user_password_confirmation, #email, #password, #genre_name, #book_title, #book_image, #book_isbn, #book_total_copies, #book_copies_available, #book_loan_duration, label > input
 {
-  background-color: transparent;
+  background-color: transparent !important;
   border: 0px;
     margin: 10px 0px;
   padding: 0px;
@@ -281,6 +286,9 @@ h6 {
   width: 841px;
   padding-left:10px;
   color: white;
+  font-style: regular;
+  font-size: 14px;
+
 }
 
 
@@ -322,6 +330,12 @@ margin-bottom: 5px;}
 {opacity: .9;
 width: 150px;
 -webkit-filter: grayscale(100%) contrast(200%);
+}
+
+.bookshowimgs
+{opacity: .9;
+width: 314px;
+/*-webkit-filter: grayscale(100%) contrast(200%);*/
 }
 
 
@@ -381,4 +395,46 @@ margin-top: 4px;}
   border-top: 1px dotted white;
   padding-top: 0px;
   margin-top: 0px;
+}
+
+.dataTables_length
+{
+  width: 200px;
+  float: left;
+}
+
+.dataTables_filter
+{
+  width: 200px;
+}
+
+#example_next, #example_previous
+{
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#example_info
+{
+  font-size: 20px;
+}
+
+tr
+{
+  background: transparent !important;
+}
+
+#discovery
+{
+  display: none !important;
+}
+
+#layout > #footer
+{
+  display: none !important;
+}
+
+input
+{
+  background: transparent !important;
 }

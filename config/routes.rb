@@ -1,4 +1,6 @@
 Mellowpages::Application.routes.draw do
+  resources :comments
+
   root :to => 'home#index'
   resources :users, :authors, :genres, :publications, :accounts, :checkouts
 
@@ -7,6 +9,8 @@ Mellowpages::Application.routes.draw do
     member do
       post 'checkout'
       post 'return'
+      post 'hold'
+      post 'comment'
     end
   end
 

@@ -1,12 +1,17 @@
 .row
   .large-3.columns
-    = form_for @book, :remote => true do |f|
+    = form_for @book, :html => {:multipart => true}, :remote => true do |f|
       = f.label :title
       = f.text_field :title, :autofocus => true
-      = f.label :image
-      = f.text_field :image
+      = f.label :url
+      = f.file_field :url
+      = f.text_field :remote_url_url
       = f.label :isbn
       = f.text_field :isbn
+      = f.label :author
+      = f.text_field :author
+      = f.label :publisher
+      = f.text_field :publisher
       = f.label :total_copies
       = f.text_field :total_copies
       = f.label :copies_available

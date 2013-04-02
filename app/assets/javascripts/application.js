@@ -5,3 +5,5 @@
 //= require 'raphael-2.1.0.min'
 //= require 'morris.min'
 //= require 'mellowpages.js'
+//= require jquery.remotipart
+//= require 'jquery.dataTables.js'

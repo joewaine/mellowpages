@@ -9,10 +9,15 @@ $(document).ready(function() {
             // $("body").css("background", "black");
             $(".headfoot").fadeIn(200);
 
+$('#example').dataTable();
 $('#annoying').on('click', '#cancel_user_form', cancel_user_form);
 $('#annoying').on('click', '#cancel_publication_form', cancel_publication_form);
 $('#annoying').on('click', '#cancel_book_form', cancel_book_form);
+$('#annoying').on('click', '#cancel_comment_form', cancel_comment_form);
 $('#annoying').on('click', '#cancel_author_form', cancel_author_form);
+$('img').hide().load(function () {
+  $(this).fadeIn(500);
+});
 
     });
 
@@ -33,6 +38,11 @@ function cancel_publication_form()
 function cancel_book_form()
 {
   $('#new_book').empty();
+}
+
+function cancel_comment_form()
+{
+  $('#new_comment').empty();
 }
 
 function cancel_author_form()

@@ -12,15 +12,3 @@
     = c.book.title
     %br
     %br
-
-
-
-/   /     %td
-/ - @books.each do |book|
-/   .book
-/     / %img{:src => book.image, :class => 'bookpageimgs'}
-/     / = link_to(:src => book.image, book_path(book), :class => 'button')
-/     = link_to image_tag(book.image, :class => 'bookpageimgs'), book_path(book)
-/     = link_to('Edit', edit_book_path(book), :remote => true, :class => 'button') if is_admin?
-/     = link_to('Delete Book', book, :method => :delete, :confirm => 'Are you sure?') if is_admin?
-/     = link_to('Reserve!', checkout_book_path(book), :method => :post, :confirm => 'you have reserved this book.') if @auth.present? && is_checked_out?

@@ -1,6 +1,42 @@
 %br
 %br
-%img{:src => @book.image, :class => 'bookpageimgs'}
-%h6= @book.title
-%p= @book.isbn
-/ %p= @book.genre
+%table
+  %tr
+    %td
+      %img{:src => @book.url, :class => 'bookshowimgs'}
+    %td
+      %h6= @book.title
+      %br
+      = @book.author
+      %br
+      = @book.publisher
+      %br
+      = @book.isbn
+      / %p= @book.genre
+      / - if @auth.present?
+      /   - if !book.is_checked_out
+      /     = link_to('Reserve!', checkout_book_path(book), :method => :post, :confirm => 'you have reserved this book.', :class => 'button')
+      /   - else
+      /     = 'Reserved.'
+      /     %br
+      /     = link_to('Release', return_book_path(book), :method => :post, :confirm => 'you have reserved this book.')
+%br
+#disqus_thread
+  = render(:partial => 'disqus')
+#new_comment
+  = link_to('+ New Comment +', comment_book_path, :remote => true, :class => 'button')
+
+
+/ = render :partial => 'comment', :collection => @book.comments
+
+
+
+/     = form_for @comment, :html => {:multipart => true}, :remote => true do |f|
+/       = f.label :name
+/       = f.text_field :name, :autofocus => true
+/       = f.label :email
+/       = f.text_field :email
+/       = f.label :body
+/       = f.text_field :body
+/       = f.submit nil, :class => 'buttonofform'
+/       = link_to('Cancel', '#', :id => 'cancel_book_form', :class => 'button')

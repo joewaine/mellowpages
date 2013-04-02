@@ -1,4 +1,4 @@
-class AddUsersTable < ActiveRecord::Migration
+  class AddUsersTable < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :first_name
@@ -6,6 +6,7 @@ class AddUsersTable < ActiveRecord::Migration
       t.string :phone
       t.string :email
       t.string :password_digest
+      # t.references :userable, :polymorphic => true
       t.boolean :is_active, :default => true
       t.boolean :is_admin, :default => false
       t.timestamps
