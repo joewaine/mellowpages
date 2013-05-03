@@ -69,16 +69,23 @@ class BooksController < ApplicationController
     #if @auth is a logged-in user AND they are the book's user. set the book checked_out to false and its user to nil
     if is_admin? || (@auth.present? && book.user.present? && (@auth == book.user))
       # currentcheckout = book.checkouts.where(:is_returned => false).first
+      returned_checkout = book.checkouts.where(:is_returned => false).first
+      returned_checkout.is_returned = true
+      returned_checkout.save
       book.is_checked_out = false
       # currentcheckout.is_returned = true
       # book.user = nil - and something to indicate that the current checkout is complete.
       book.save
       # currentcheckout.save
+
       current_checkout = book.checkouts.where(:is_held => true).first
-      nextuser = current_checkout.user
-      current_checkout.is_held = false
-      current_checkout.is_returned = false
-      Notifications.return_message(nextuser).deliver
+      if current_checkout
+        current_checkout.is_held = false
+        current_checkout.is_returned = false
+        nextuser = current_checkout.user
+        Notifications.return_message(nextuser).deliver
+      end
+# Notifications.return_message(nextuser).deliver
       redirect_to(books_path)
     end
   end
@@ -96,8 +103,4 @@ class BooksController < ApplicationController
     Book.import(params[:file])
     redirect_to root_url, notice: "Books Imported!"
   end
-
-
-
-
 end

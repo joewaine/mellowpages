@@ -10,6 +10,7 @@ Hold.delete_all
 u1 = User.create(:first_name => 'jim', :last_name => 'smith', :phone => '+14254429308', :email => 'joe.waine@gmail.com', :password => 'a', :password_confirmation => 'a')
 u2 = User.create(:first_name => 'temple', :last_name => 'vibe', :phone => '+14254409908', :email => 'templevibe@gmail.com', :password => 'a', :password_confirmation => 'a')
 u3 = User.create(:first_name => 'jos', :last_name => 'waine', :phone => '+14254497308', :email => 'jos.waine@arts.cornish.edu', :password => 'a', :password_confirmation => 'a')
+u4 = User.create(:first_name => 'paul', :last_name => 'green', :phone => '+14254490308', :email => 'p@gmail.com', :password => 'p', :password_confirmation => 'p')
 u1.is_admin = true
 u1.save
 
